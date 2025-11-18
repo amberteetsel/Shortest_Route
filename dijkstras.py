@@ -1,17 +1,16 @@
 from src.modules.graph import Graph
+import json
 
-g = Graph(8)
 
-g.add_vertex_data(0, 'Times Square (Broadway & 7th Ave)')
-g.add_vertex_data(1, 'Rockefeller Center (45 Rockefeller Plaza)')
-g.add_vertex_data(2, 'Bryant Park / New York Public Library (42nd St & 6th Ave)')
-g.add_vertex_data(3, 'Grand Central Terminal (89 E 42nd St)')
-g.add_vertex_data(4, 'Empire State Building (350 5th Ave)')
-g.add_vertex_data(5, 'Flatiron Building / Madison Square Park (23rd St & 5th Ave)')
-g.add_vertex_data(6, 'Union Square (14th St & Broadway)')
-g.add_vertex_data(7, 'Chelsea / Chelsea Market (15th St / High Line access near Gansevoort)')
-g.add_vertex_data(8, 'Washington Square Park (W 4th St, Greenwich Village)')
-g.add_vertex_data(9, 'Battery Park / South Ferry (southern tip of Manhattan)')
+with open('locations.json', 'r') as f:
+    loaded_dict = json.load(f)
+
+g = Graph(len(loaded_dict))
+
+i = 0
+for key in loaded_dict.keys():
+    g.add_vertex_data(i, key)
+    i += 1
 
 g.add_edge(0, 1, 9)
 g.add_edge(0, 2, 3)
