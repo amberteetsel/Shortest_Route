@@ -1,0 +1,676 @@
+{
+  "nodes": {
+    "0": {
+      "name": "Times Square",
+      "lat": 40.757,
+      "lon": -73.98597
+    },
+    "1": {
+      "name": "Rockefeller Center",
+      "lat": 40.75926,
+      "lon": -73.97996
+    },
+    "2": {
+      "name": "Bryant Park / NYPL",
+      "lat": 40.75361,
+      "lon": -73.98417
+    },
+    "3": {
+      "name": "Grand Central Terminal",
+      "lat": 40.75273,
+      "lon": -73.97723
+    },
+    "4": {
+      "name": "Empire State Building",
+      "lat": 40.74844,
+      "lon": -73.98566
+    },
+    "5": {
+      "name": "Flatiron / Madison Sq Park",
+      "lat": 40.74103,
+      "lon": -73.98969
+    },
+    "6": {
+      "name": "Union Square",
+      "lat": 40.7367,
+      "lon": -73.9899
+    },
+    "7": {
+      "name": "Chelsea Market",
+      "lat": 40.7388,
+      "lon": -74.0037
+    },
+    "8": {
+      "name": "Washington Square Park",
+      "lat": 40.73082,
+      "lon": -73.99733
+    },
+    "9": {
+      "name": "Battery Park / South Ferry",
+      "lat": 40.70314,
+      "lon": -74.016
+    }
+  },
+  "pairwise": {
+    "0": {
+      "0": {
+        "avg_distance_km": 0.0,
+        "avg_time_min": 0.0,
+        "peak_distance_km": 0.0,
+        "peak_time_min": 0.0
+      },
+      "1": {
+        "avg_distance_km": 0.735,
+        "avg_time_min": 2.45,
+        "peak_distance_km": 0.735,
+        "peak_time_min": 4.9
+      },
+      "2": {
+        "avg_distance_km": 0.528,
+        "avg_time_min": 1.76,
+        "peak_distance_km": 0.528,
+        "peak_time_min": 3.52
+      },
+      "3": {
+        "avg_distance_km": 1.139,
+        "avg_time_min": 3.8,
+        "peak_distance_km": 1.139,
+        "peak_time_min": 7.6
+      },
+      "4": {
+        "avg_distance_km": 1.238,
+        "avg_time_min": 4.13,
+        "peak_distance_km": 1.238,
+        "peak_time_min": 8.26
+      },
+      "5": {
+        "avg_distance_km": 2.344,
+        "avg_time_min": 7.81,
+        "peak_distance_km": 2.344,
+        "peak_time_min": 15.62
+      },
+      "6": {
+        "avg_distance_km": 2.966,
+        "avg_time_min": 9.89,
+        "peak_distance_km": 2.966,
+        "peak_time_min": 19.78
+      },
+      "7": {
+        "avg_distance_km": 3.27,
+        "avg_time_min": 10.9,
+        "peak_distance_km": 3.27,
+        "peak_time_min": 21.8
+      },
+      "8": {
+        "avg_distance_km": 3.984,
+        "avg_time_min": 13.28,
+        "peak_distance_km": 3.984,
+        "peak_time_min": 26.56
+      },
+      "9": {
+        "avg_distance_km": 8.452,
+        "avg_time_min": 28.17,
+        "peak_distance_km": 8.452,
+        "peak_time_min": 56.34
+      }
+    },
+    "1": {
+      "0": {
+        "avg_distance_km": 0.735,
+        "avg_time_min": 2.45,
+        "peak_distance_km": 0.735,
+        "peak_time_min": 4.9
+      },
+      "1": {
+        "avg_distance_km": 0.0,
+        "avg_time_min": 0.0,
+        "peak_distance_km": 0.0,
+        "peak_time_min": 0.0
+      },
+      "2": {
+        "avg_distance_km": 0.938,
+        "avg_time_min": 3.13,
+        "peak_distance_km": 0.938,
+        "peak_time_min": 6.26
+      },
+      "3": {
+        "avg_distance_km": 0.99,
+        "avg_time_min": 3.3,
+        "peak_distance_km": 0.99,
+        "peak_time_min": 6.6
+      },
+      "4": {
+        "avg_distance_km": 1.684,
+        "avg_time_min": 5.61,
+        "peak_distance_km": 1.684,
+        "peak_time_min": 11.22
+      },
+      "5": {
+        "avg_distance_km": 2.842,
+        "avg_time_min": 9.47,
+        "peak_distance_km": 2.842,
+        "peak_time_min": 18.94
+      },
+      "6": {
+        "avg_distance_km": 3.438,
+        "avg_time_min": 11.46,
+        "peak_distance_km": 3.438,
+        "peak_time_min": 22.92
+      },
+      "7": {
+        "avg_distance_km": 3.938,
+        "avg_time_min": 13.13,
+        "peak_distance_km": 3.938,
+        "peak_time_min": 26.26
+      },
+      "8": {
+        "avg_distance_km": 4.53,
+        "avg_time_min": 15.1,
+        "peak_distance_km": 4.53,
+        "peak_time_min": 30.2
+      },
+      "9": {
+        "avg_distance_km": 9.022,
+        "avg_time_min": 30.07,
+        "peak_distance_km": 9.022,
+        "peak_time_min": 60.14
+      }
+    },
+    "2": {
+      "0": {
+        "avg_distance_km": 0.528,
+        "avg_time_min": 1.76,
+        "peak_distance_km": 0.528,
+        "peak_time_min": 3.52
+      },
+      "1": {
+        "avg_distance_km": 0.938,
+        "avg_time_min": 3.13,
+        "peak_distance_km": 0.938,
+        "peak_time_min": 6.26
+      },
+      "2": {
+        "avg_distance_km": 0.0,
+        "avg_time_min": 0.0,
+        "peak_distance_km": 0.0,
+        "peak_time_min": 0.0
+      },
+      "3": {
+        "avg_distance_km": 0.771,
+        "avg_time_min": 2.57,
+        "peak_distance_km": 0.771,
+        "peak_time_min": 5.14
+      },
+      "4": {
+        "avg_distance_km": 0.765,
+        "avg_time_min": 2.55,
+        "peak_distance_km": 0.765,
+        "peak_time_min": 5.1
+      },
+      "5": {
+        "avg_distance_km": 1.916,
+        "avg_time_min": 6.39,
+        "peak_distance_km": 1.916,
+        "peak_time_min": 12.78
+      },
+      "6": {
+        "avg_distance_km": 2.524,
+        "avg_time_min": 8.41,
+        "peak_distance_km": 2.524,
+        "peak_time_min": 16.82
+      },
+      "7": {
+        "avg_distance_km": 3.026,
+        "avg_time_min": 10.09,
+        "peak_distance_km": 3.026,
+        "peak_time_min": 20.18
+      },
+      "8": {
+        "avg_distance_km": 3.596,
+        "avg_time_min": 11.99,
+        "peak_distance_km": 3.596,
+        "peak_time_min": 23.98
+      },
+      "9": {
+        "avg_distance_km": 8.086,
+        "avg_time_min": 26.95,
+        "peak_distance_km": 8.086,
+        "peak_time_min": 53.9
+      }
+    },
+    "3": {
+      "0": {
+        "avg_distance_km": 1.139,
+        "avg_time_min": 3.8,
+        "peak_distance_km": 1.139,
+        "peak_time_min": 7.6
+      },
+      "1": {
+        "avg_distance_km": 0.99,
+        "avg_time_min": 3.3,
+        "peak_distance_km": 0.99,
+        "peak_time_min": 6.6
+      },
+      "2": {
+        "avg_distance_km": 0.771,
+        "avg_time_min": 2.57,
+        "peak_distance_km": 0.771,
+        "peak_time_min": 5.14
+      },
+      "3": {
+        "avg_distance_km": 0.0,
+        "avg_time_min": 0.0,
+        "peak_distance_km": 0.0,
+        "peak_time_min": 0.0
+      },
+      "4": {
+        "avg_distance_km": 1.112,
+        "avg_time_min": 3.71,
+        "peak_distance_km": 1.112,
+        "peak_time_min": 7.42
+      },
+      "5": {
+        "avg_distance_km": 2.173,
+        "avg_time_min": 7.24,
+        "peak_distance_km": 2.173,
+        "peak_time_min": 14.48
+      },
+      "6": {
+        "avg_distance_km": 2.701,
+        "avg_time_min": 9.0,
+        "peak_distance_km": 2.701,
+        "peak_time_min": 18.0
+      },
+      "7": {
+        "avg_distance_km": 3.53,
+        "avg_time_min": 11.77,
+        "peak_distance_km": 3.53,
+        "peak_time_min": 23.54
+      },
+      "8": {
+        "avg_distance_km": 3.857,
+        "avg_time_min": 12.86,
+        "peak_distance_km": 3.857,
+        "peak_time_min": 25.72
+      },
+      "9": {
+        "avg_distance_km": 8.332,
+        "avg_time_min": 27.77,
+        "peak_distance_km": 8.332,
+        "peak_time_min": 55.54
+      }
+    },
+    "4": {
+      "0": {
+        "avg_distance_km": 1.238,
+        "avg_time_min": 4.13,
+        "peak_distance_km": 1.238,
+        "peak_time_min": 8.26
+      },
+      "1": {
+        "avg_distance_km": 1.684,
+        "avg_time_min": 5.61,
+        "peak_distance_km": 1.684,
+        "peak_time_min": 11.22
+      },
+      "2": {
+        "avg_distance_km": 0.765,
+        "avg_time_min": 2.55,
+        "peak_distance_km": 0.765,
+        "peak_time_min": 5.1
+      },
+      "3": {
+        "avg_distance_km": 1.112,
+        "avg_time_min": 3.71,
+        "peak_distance_km": 1.112,
+        "peak_time_min": 7.42
+      },
+      "4": {
+        "avg_distance_km": 0.0,
+        "avg_time_min": 0.0,
+        "peak_distance_km": 0.0,
+        "peak_time_min": 0.0
+      },
+      "5": {
+        "avg_distance_km": 1.159,
+        "avg_time_min": 3.86,
+        "peak_distance_km": 1.159,
+        "peak_time_min": 7.72
+      },
+      "6": {
+        "avg_distance_km": 1.759,
+        "avg_time_min": 5.86,
+        "peak_distance_km": 1.759,
+        "peak_time_min": 11.72
+      },
+      "7": {
+        "avg_distance_km": 2.418,
+        "avg_time_min": 8.06,
+        "peak_distance_km": 2.418,
+        "peak_time_min": 16.12
+      },
+      "8": {
+        "avg_distance_km": 2.85,
+        "avg_time_min": 9.5,
+        "peak_distance_km": 2.85,
+        "peak_time_min": 19.0
+      },
+      "9": {
+        "avg_distance_km": 7.343,
+        "avg_time_min": 24.48,
+        "peak_distance_km": 7.343,
+        "peak_time_min": 48.96
+      }
+    },
+    "5": {
+      "0": {
+        "avg_distance_km": 2.344,
+        "avg_time_min": 7.81,
+        "peak_distance_km": 2.344,
+        "peak_time_min": 15.62
+      },
+      "1": {
+        "avg_distance_km": 2.842,
+        "avg_time_min": 9.47,
+        "peak_distance_km": 2.842,
+        "peak_time_min": 18.94
+      },
+      "2": {
+        "avg_distance_km": 1.916,
+        "avg_time_min": 6.39,
+        "peak_distance_km": 1.916,
+        "peak_time_min": 12.78
+      },
+      "3": {
+        "avg_distance_km": 2.173,
+        "avg_time_min": 7.24,
+        "peak_distance_km": 2.173,
+        "peak_time_min": 14.48
+      },
+      "4": {
+        "avg_distance_km": 1.159,
+        "avg_time_min": 3.86,
+        "peak_distance_km": 1.159,
+        "peak_time_min": 7.72
+      },
+      "5": {
+        "avg_distance_km": 0.0,
+        "avg_time_min": 0.0,
+        "peak_distance_km": 0.0,
+        "peak_time_min": 0.0
+      },
+      "6": {
+        "avg_distance_km": 0.626,
+        "avg_time_min": 2.09,
+        "peak_distance_km": 0.626,
+        "peak_time_min": 4.18
+      },
+      "7": {
+        "avg_distance_km": 1.568,
+        "avg_time_min": 5.23,
+        "peak_distance_km": 1.568,
+        "peak_time_min": 10.46
+      },
+      "8": {
+        "avg_distance_km": 1.697,
+        "avg_time_min": 5.66,
+        "peak_distance_km": 1.697,
+        "peak_time_min": 11.32
+      },
+      "9": {
+        "avg_distance_km": 6.189,
+        "avg_time_min": 20.63,
+        "peak_distance_km": 6.189,
+        "peak_time_min": 41.26
+      }
+    },
+    "6": {
+      "0": {
+        "avg_distance_km": 2.966,
+        "avg_time_min": 9.89,
+        "peak_distance_km": 2.966,
+        "peak_time_min": 19.78
+      },
+      "1": {
+        "avg_distance_km": 3.438,
+        "avg_time_min": 11.46,
+        "peak_distance_km": 3.438,
+        "peak_time_min": 22.92
+      },
+      "2": {
+        "avg_distance_km": 2.524,
+        "avg_time_min": 8.41,
+        "peak_distance_km": 2.524,
+        "peak_time_min": 16.82
+      },
+      "3": {
+        "avg_distance_km": 2.701,
+        "avg_time_min": 9.0,
+        "peak_distance_km": 2.701,
+        "peak_time_min": 18.0
+      },
+      "4": {
+        "avg_distance_km": 1.759,
+        "avg_time_min": 5.86,
+        "peak_distance_km": 1.759,
+        "peak_time_min": 11.72
+      },
+      "5": {
+        "avg_distance_km": 0.626,
+        "avg_time_min": 2.09,
+        "peak_distance_km": 0.626,
+        "peak_time_min": 4.18
+      },
+      "6": {
+        "avg_distance_km": 0.0,
+        "avg_time_min": 0.0,
+        "peak_distance_km": 0.0,
+        "peak_time_min": 0.0
+      },
+      "7": {
+        "avg_distance_km": 1.542,
+        "avg_time_min": 5.14,
+        "peak_distance_km": 1.542,
+        "peak_time_min": 10.28
+      },
+      "8": {
+        "avg_distance_km": 1.177,
+        "avg_time_min": 3.92,
+        "peak_distance_km": 1.177,
+        "peak_time_min": 7.84
+      },
+      "9": {
+        "avg_distance_km": 5.631,
+        "avg_time_min": 18.77,
+        "peak_distance_km": 5.631,
+        "peak_time_min": 37.54
+      }
+    },
+    "7": {
+      "0": {
+        "avg_distance_km": 3.27,
+        "avg_time_min": 10.9,
+        "peak_distance_km": 3.27,
+        "peak_time_min": 21.8
+      },
+      "1": {
+        "avg_distance_km": 3.938,
+        "avg_time_min": 13.13,
+        "peak_distance_km": 3.938,
+        "peak_time_min": 26.26
+      },
+      "2": {
+        "avg_distance_km": 3.026,
+        "avg_time_min": 10.09,
+        "peak_distance_km": 3.026,
+        "peak_time_min": 20.18
+      },
+      "3": {
+        "avg_distance_km": 3.53,
+        "avg_time_min": 11.77,
+        "peak_distance_km": 3.53,
+        "peak_time_min": 23.54
+      },
+      "4": {
+        "avg_distance_km": 2.418,
+        "avg_time_min": 8.06,
+        "peak_distance_km": 2.418,
+        "peak_time_min": 16.12
+      },
+      "5": {
+        "avg_distance_km": 1.568,
+        "avg_time_min": 5.23,
+        "peak_distance_km": 1.568,
+        "peak_time_min": 10.46
+      },
+      "6": {
+        "avg_distance_km": 1.542,
+        "avg_time_min": 5.14,
+        "peak_distance_km": 1.542,
+        "peak_time_min": 10.28
+      },
+      "7": {
+        "avg_distance_km": 0.0,
+        "avg_time_min": 0.0,
+        "peak_distance_km": 0.0,
+        "peak_time_min": 0.0
+      },
+      "8": {
+        "avg_distance_km": 1.348,
+        "avg_time_min": 4.49,
+        "peak_distance_km": 1.348,
+        "peak_time_min": 8.98
+      },
+      "9": {
+        "avg_distance_km": 5.328,
+        "avg_time_min": 17.76,
+        "peak_distance_km": 5.328,
+        "peak_time_min": 35.52
+      }
+    },
+    "8": {
+      "0": {
+        "avg_distance_km": 3.984,
+        "avg_time_min": 13.28,
+        "peak_distance_km": 3.984,
+        "peak_time_min": 26.56
+      },
+      "1": {
+        "avg_distance_km": 4.53,
+        "avg_time_min": 15.1,
+        "peak_distance_km": 4.53,
+        "peak_time_min": 30.2
+      },
+      "2": {
+        "avg_distance_km": 3.596,
+        "avg_time_min": 11.99,
+        "peak_distance_km": 3.596,
+        "peak_time_min": 23.98
+      },
+      "3": {
+        "avg_distance_km": 3.857,
+        "avg_time_min": 12.86,
+        "peak_distance_km": 3.857,
+        "peak_time_min": 25.72
+      },
+      "4": {
+        "avg_distance_km": 2.85,
+        "avg_time_min": 9.5,
+        "peak_distance_km": 2.85,
+        "peak_time_min": 19.0
+      },
+      "5": {
+        "avg_distance_km": 1.697,
+        "avg_time_min": 5.66,
+        "peak_distance_km": 1.697,
+        "peak_time_min": 11.32
+      },
+      "6": {
+        "avg_distance_km": 1.177,
+        "avg_time_min": 3.92,
+        "peak_distance_km": 1.177,
+        "peak_time_min": 7.84
+      },
+      "7": {
+        "avg_distance_km": 1.348,
+        "avg_time_min": 4.49,
+        "peak_distance_km": 1.348,
+        "peak_time_min": 8.98
+      },
+      "8": {
+        "avg_distance_km": 0.0,
+        "avg_time_min": 0.0,
+        "peak_distance_km": 0.0,
+        "peak_time_min": 0.0
+      },
+      "9": {
+        "avg_distance_km": 4.494,
+        "avg_time_min": 14.98,
+        "peak_distance_km": 4.494,
+        "peak_time_min": 29.96
+      }
+    },
+    "9": {
+      "0": {
+        "avg_distance_km": 8.452,
+        "avg_time_min": 28.17,
+        "peak_distance_km": 8.452,
+        "peak_time_min": 56.34
+      },
+      "1": {
+        "avg_distance_km": 9.022,
+        "avg_time_min": 30.07,
+        "peak_distance_km": 9.022,
+        "peak_time_min": 60.14
+      },
+      "2": {
+        "avg_distance_km": 8.086,
+        "avg_time_min": 26.95,
+        "peak_distance_km": 8.086,
+        "peak_time_min": 53.9
+      },
+      "3": {
+        "avg_distance_km": 8.332,
+        "avg_time_min": 27.77,
+        "peak_distance_km": 8.332,
+        "peak_time_min": 55.54
+      },
+      "4": {
+        "avg_distance_km": 7.343,
+        "avg_time_min": 24.48,
+        "peak_distance_km": 7.343,
+        "peak_time_min": 48.96
+      },
+      "5": {
+        "avg_distance_km": 6.189,
+        "avg_time_min": 20.63,
+        "peak_distance_km": 6.189,
+        "peak_time_min": 41.26
+      },
+      "6": {
+        "avg_distance_km": 5.631,
+        "avg_time_min": 18.77,
+        "peak_distance_km": 5.631,
+        "peak_time_min": 37.54
+      },
+      "7": {
+        "avg_distance_km": 5.328,
+        "avg_time_min": 17.76,
+        "peak_distance_km": 5.328,
+        "peak_time_min": 35.52
+      },
+      "8": {
+        "avg_distance_km": 4.494,
+        "avg_time_min": 14.98,
+        "peak_distance_km": 4.494,
+        "peak_time_min": 29.96
+      },
+      "9": {
+        "avg_distance_km": 0.0,
+        "avg_time_min": 0.0,
+        "peak_distance_km": 0.0,
+        "peak_time_min": 0.0
+      }
+    }
+  }
+}
