@@ -1,21 +1,21 @@
-# Shortest_Route
+# Shortest Route
 ## Data Structures &amp; Algorithms Group Project 3
-----------------------------------------------------
+
 
 ### Approach
 
-#### City Selection
+##### I. City Selection
 
-#### Defining Nodes
+##### II. Defining Nodes
 
-#### Building the Map
+##### III. Building the Map
 
-#### Base + Rush Hour Scenarios
+##### VI: Base + Rush Hour Scenarios
 
 ###  Graph Structure &amp; Algorithm Implementation
 
-#### Graph Representation
+##### I: Graph Representation
 
-#### Dijkstra's Algorithm
+##### II: Dijkstra's Algorithm
 
-#### Design Choices
+##### III: Design Choices
