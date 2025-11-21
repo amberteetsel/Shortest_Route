@@ -11,4 +11,3 @@ for key in loc_dict['nodes'].keys():
     gmap.marker(loc_dict['nodes'][key]['lat'], loc_dict['nodes'][key]['lon'], 'cornflowerblue', title = loc_dict['nodes'][key]['name'])
 
 gmap.draw("location_visualizer.html")
-

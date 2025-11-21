@@ -12,7 +12,7 @@ class Graph:
     def add_vertex_data(self, vertex, data):
         if 0 <= vertex < self.size:
             self.vertex_data[vertex] = data
-    
+
     def dijkstra(self, start_vertex_data):
         start_vertex = self.vertex_data.index(start_vertex_data)
         distances = [float('inf')] * self.size
