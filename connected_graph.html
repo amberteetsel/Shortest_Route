@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_747c0bfb6df54b1663610687117ec804 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            bottom: 50px; right: 50px; width: 200px; height: 120px; 
+            background-color: white; border:2px solid grey; z-index:9999; 
+            font-size:14px; padding: 10px">
+<p><b>NYC Landmarks Graph</b></p>
+<p><span style="color:red;">●</span> Landmark Node</p>
+<p><span style="color:blue;">━</span> Direct Connection</p>
+<p>Total Nodes: 10<br>Total Edges: 13</p>
+</div>
+    
+            <div class="folium-map" id="map_747c0bfb6df54b1663610687117ec804" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_747c0bfb6df54b1663610687117ec804 = L.map(
+                "map_747c0bfb6df54b1663610687117ec804",
+                {
+                    center: [40.7425, -73.9875],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5dd904b8bfa27863b719af325df358b3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5dd904b8bfa27863b719af325df358b3.addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var poly_line_5c0313f60275a06d6e70d1a6e07c92d6 = L.polyline(
+                [[40.757, -73.98597], [40.75926, -73.97996]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            poly_line_5c0313f60275a06d6e70d1a6e07c92d6.bindTooltip(
+                `<div>
+                     
+            Times Square ↔ Rockefeller Center<br>
+            Distance: 0.735 km<br>
+            Avg Time: 2.45 min<br>
+            Peak Time: 4.9 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9add8f2ddf0bfafb589f73e06433cfd8 = L.marker(
+                [40.758129999999994, -73.98296500000001],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var div_icon_b6a96869ba7a4b35d121f722dbfffacf = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 10px; color: #1a1a1a; \n                                background-color: rgba(255, 255, 255, 0.8); \n                                padding: 2px 4px; border-radius: 3px;\n                                border: 1px solid #0066cc;\n                                font-weight: bold; white-space: nowrap;\"\u003e\n                        0.735 km / 2.45 min\n                    \u003c/div\u003e\n                ",
+  "className": "empty",
+});
+        
+    
+            marker_9add8f2ddf0bfafb589f73e06433cfd8.bindTooltip(
+                `<div>
+                     
+            Times Square ↔ Rockefeller Center<br>
+            Distance: 0.735 km<br>
+            Avg Time: 2.45 min<br>
+            Peak Time: 4.9 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9add8f2ddf0bfafb589f73e06433cfd8.setIcon(div_icon_b6a96869ba7a4b35d121f722dbfffacf);
+            
+    
+            var poly_line_8a9265d244b090f65ae19bde43bcee6e = L.polyline(
+                [[40.757, -73.98597], [40.75361, -73.98417]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            poly_line_8a9265d244b090f65ae19bde43bcee6e.bindTooltip(
+                `<div>
+                     
+            Times Square ↔ Bryant Park / NYPL<br>
+            Distance: 0.528 km<br>
+            Avg Time: 1.76 min<br>
+            Peak Time: 3.52 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9cdef8128b6138be0c81bf8f7f945070 = L.marker(
+                [40.755305, -73.98507000000001],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var div_icon_548acdee8b5ac18e3481b08c068ad510 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 10px; color: #1a1a1a; \n                                background-color: rgba(255, 255, 255, 0.8); \n                                padding: 2px 4px; border-radius: 3px;\n                                border: 1px solid #0066cc;\n                                font-weight: bold; white-space: nowrap;\"\u003e\n                        0.528 km / 1.76 min\n                    \u003c/div\u003e\n                ",
+  "className": "empty",
+});
+        
+    
+            marker_9cdef8128b6138be0c81bf8f7f945070.bindTooltip(
+                `<div>
+                     
+            Times Square ↔ Bryant Park / NYPL<br>
+            Distance: 0.528 km<br>
+            Avg Time: 1.76 min<br>
+            Peak Time: 3.52 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9cdef8128b6138be0c81bf8f7f945070.setIcon(div_icon_548acdee8b5ac18e3481b08c068ad510);
+            
+    
+            var poly_line_aacd9480a1dffbb1f50022eb76954bf4 = L.polyline(
+                [[40.75926, -73.97996], [40.75361, -73.98417]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            poly_line_aacd9480a1dffbb1f50022eb76954bf4.bindTooltip(
+                `<div>
+                     
+            Rockefeller Center ↔ Bryant Park / NYPL<br>
+            Distance: 0.938 km<br>
+            Avg Time: 3.13 min<br>
+            Peak Time: 6.26 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c18f3b400e4bd36c03278b09af554a61 = L.marker(
+                [40.756434999999996, -73.982065],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var div_icon_161d2b889d6453178834a461f5bbb5e0 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 10px; color: #1a1a1a; \n                                background-color: rgba(255, 255, 255, 0.8); \n                                padding: 2px 4px; border-radius: 3px;\n                                border: 1px solid #0066cc;\n                                font-weight: bold; white-space: nowrap;\"\u003e\n                        0.938 km / 3.13 min\n                    \u003c/div\u003e\n                ",
+  "className": "empty",
+});
+        
+    
+            marker_c18f3b400e4bd36c03278b09af554a61.bindTooltip(
+                `<div>
+                     
+            Rockefeller Center ↔ Bryant Park / NYPL<br>
+            Distance: 0.938 km<br>
+            Avg Time: 3.13 min<br>
+            Peak Time: 6.26 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c18f3b400e4bd36c03278b09af554a61.setIcon(div_icon_161d2b889d6453178834a461f5bbb5e0);
+            
+    
+            var poly_line_bb109350627610592d0e7b118f54c9e2 = L.polyline(
+                [[40.75926, -73.97996], [40.75273, -73.97723]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            poly_line_bb109350627610592d0e7b118f54c9e2.bindTooltip(
+                `<div>
+                     
+            Rockefeller Center ↔ Grand Central Terminal<br>
+            Distance: 0.99 km<br>
+            Avg Time: 3.3 min<br>
+            Peak Time: 6.6 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a6dcf2af77e09fa7e2e1fd4b473aa6b3 = L.marker(
+                [40.755995, -73.97859500000001],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var div_icon_5546b3b17628e1a382b42a0b1f27a629 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 10px; color: #1a1a1a; \n                                background-color: rgba(255, 255, 255, 0.8); \n                                padding: 2px 4px; border-radius: 3px;\n                                border: 1px solid #0066cc;\n                                font-weight: bold; white-space: nowrap;\"\u003e\n                        0.99 km / 3.3 min\n                    \u003c/div\u003e\n                ",
+  "className": "empty",
+});
+        
+    
+            marker_a6dcf2af77e09fa7e2e1fd4b473aa6b3.bindTooltip(
+                `<div>
+                     
+            Rockefeller Center ↔ Grand Central Terminal<br>
+            Distance: 0.99 km<br>
+            Avg Time: 3.3 min<br>
+            Peak Time: 6.6 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a6dcf2af77e09fa7e2e1fd4b473aa6b3.setIcon(div_icon_5546b3b17628e1a382b42a0b1f27a629);
+            
+    
+            var poly_line_7abcf3c1981ea953d8f20c223af4ce6b = L.polyline(
+                [[40.75361, -73.98417], [40.75273, -73.97723]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            poly_line_7abcf3c1981ea953d8f20c223af4ce6b.bindTooltip(
+                `<div>
+                     
+            Bryant Park / NYPL ↔ Grand Central Terminal<br>
+            Distance: 0.771 km<br>
+            Avg Time: 2.57 min<br>
+            Peak Time: 5.14 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d4cd253e3a24a94b5c1d77ab892e2cff = L.marker(
+                [40.75317, -73.98070000000001],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var div_icon_824f2b5d308dfd8be3d8bced98d7ec33 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 10px; color: #1a1a1a; \n                                background-color: rgba(255, 255, 255, 0.8); \n                                padding: 2px 4px; border-radius: 3px;\n                                border: 1px solid #0066cc;\n                                font-weight: bold; white-space: nowrap;\"\u003e\n                        0.771 km / 2.57 min\n                    \u003c/div\u003e\n                ",
+  "className": "empty",
+});
+        
+    
+            marker_d4cd253e3a24a94b5c1d77ab892e2cff.bindTooltip(
+                `<div>
+                     
+            Bryant Park / NYPL ↔ Grand Central Terminal<br>
+            Distance: 0.771 km<br>
+            Avg Time: 2.57 min<br>
+            Peak Time: 5.14 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d4cd253e3a24a94b5c1d77ab892e2cff.setIcon(div_icon_824f2b5d308dfd8be3d8bced98d7ec33);
+            
+    
+            var poly_line_1e897d1043fa95a6265b75052dd31550 = L.polyline(
+                [[40.75361, -73.98417], [40.74844, -73.98566]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            poly_line_1e897d1043fa95a6265b75052dd31550.bindTooltip(
+                `<div>
+                     
+            Bryant Park / NYPL ↔ Empire State Building<br>
+            Distance: 0.765 km<br>
+            Avg Time: 2.55 min<br>
+            Peak Time: 5.1 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_93eb108abc2def8c60f131fd7a5edcdc = L.marker(
+                [40.751025, -73.984915],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var div_icon_7a7e056ac09df6b15b8dc3b38bd65100 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 10px; color: #1a1a1a; \n                                background-color: rgba(255, 255, 255, 0.8); \n                                padding: 2px 4px; border-radius: 3px;\n                                border: 1px solid #0066cc;\n                                font-weight: bold; white-space: nowrap;\"\u003e\n                        0.765 km / 2.55 min\n                    \u003c/div\u003e\n                ",
+  "className": "empty",
+});
+        
+    
+            marker_93eb108abc2def8c60f131fd7a5edcdc.bindTooltip(
+                `<div>
+                     
+            Bryant Park / NYPL ↔ Empire State Building<br>
+            Distance: 0.765 km<br>
+            Avg Time: 2.55 min<br>
+            Peak Time: 5.1 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_93eb108abc2def8c60f131fd7a5edcdc.setIcon(div_icon_7a7e056ac09df6b15b8dc3b38bd65100);
+            
+    
+            var poly_line_f0b850b86b080a7ac793dacfb8544d6b = L.polyline(
+                [[40.75273, -73.97723], [40.74844, -73.98566]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            poly_line_f0b850b86b080a7ac793dacfb8544d6b.bindTooltip(
+                `<div>
+                     
+            Grand Central Terminal ↔ Empire State Building<br>
+            Distance: 1.112 km<br>
+            Avg Time: 3.71 min<br>
+            Peak Time: 7.42 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7b2a16fda7ba0e7c565e65452b4dcb6f = L.marker(
+                [40.750585, -73.98144500000001],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var div_icon_818a7986901eb0464a999922128ef44e = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 10px; color: #1a1a1a; \n                                background-color: rgba(255, 255, 255, 0.8); \n                                padding: 2px 4px; border-radius: 3px;\n                                border: 1px solid #0066cc;\n                                font-weight: bold; white-space: nowrap;\"\u003e\n                        1.112 km / 3.71 min\n                    \u003c/div\u003e\n                ",
+  "className": "empty",
+});
+        
+    
+            marker_7b2a16fda7ba0e7c565e65452b4dcb6f.bindTooltip(
+                `<div>
+                     
+            Grand Central Terminal ↔ Empire State Building<br>
+            Distance: 1.112 km<br>
+            Avg Time: 3.71 min<br>
+            Peak Time: 7.42 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7b2a16fda7ba0e7c565e65452b4dcb6f.setIcon(div_icon_818a7986901eb0464a999922128ef44e);
+            
+    
+            var poly_line_d2d49de3888e952e7c6b4327267a2533 = L.polyline(
+                [[40.74844, -73.98566], [40.74103, -73.98969]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            poly_line_d2d49de3888e952e7c6b4327267a2533.bindTooltip(
+                `<div>
+                     
+            Empire State Building ↔ Flatiron / Madison Sq Park<br>
+            Distance: 1.159 km<br>
+            Avg Time: 3.86 min<br>
+            Peak Time: 7.72 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_00cc789233e3b1019d430b34b2c9b909 = L.marker(
+                [40.744735000000006, -73.987675],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var div_icon_77c33016eb16ec25f77d62f4811eb26d = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 10px; color: #1a1a1a; \n                                background-color: rgba(255, 255, 255, 0.8); \n                                padding: 2px 4px; border-radius: 3px;\n                                border: 1px solid #0066cc;\n                                font-weight: bold; white-space: nowrap;\"\u003e\n                        1.159 km / 3.86 min\n                    \u003c/div\u003e\n                ",
+  "className": "empty",
+});
+        
+    
+            marker_00cc789233e3b1019d430b34b2c9b909.bindTooltip(
+                `<div>
+                     
+            Empire State Building ↔ Flatiron / Madison Sq Park<br>
+            Distance: 1.159 km<br>
+            Avg Time: 3.86 min<br>
+            Peak Time: 7.72 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_00cc789233e3b1019d430b34b2c9b909.setIcon(div_icon_77c33016eb16ec25f77d62f4811eb26d);
+            
+    
+            var poly_line_b2b5aac9a7fe588851d0821e00492784 = L.polyline(
+                [[40.74103, -73.98969], [40.7367, -73.9899]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            poly_line_b2b5aac9a7fe588851d0821e00492784.bindTooltip(
+                `<div>
+                     
+            Flatiron / Madison Sq Park ↔ Union Square<br>
+            Distance: 0.626 km<br>
+            Avg Time: 2.09 min<br>
+            Peak Time: 4.18 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9ecac8956245faab1f7248e84d400664 = L.marker(
+                [40.738865000000004, -73.989795],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var div_icon_75807f3907a67eed3e910308632d5157 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 10px; color: #1a1a1a; \n                                background-color: rgba(255, 255, 255, 0.8); \n                                padding: 2px 4px; border-radius: 3px;\n                                border: 1px solid #0066cc;\n                                font-weight: bold; white-space: nowrap;\"\u003e\n                        0.626 km / 2.09 min\n                    \u003c/div\u003e\n                ",
+  "className": "empty",
+});
+        
+    
+            marker_9ecac8956245faab1f7248e84d400664.bindTooltip(
+                `<div>
+                     
+            Flatiron / Madison Sq Park ↔ Union Square<br>
+            Distance: 0.626 km<br>
+            Avg Time: 2.09 min<br>
+            Peak Time: 4.18 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9ecac8956245faab1f7248e84d400664.setIcon(div_icon_75807f3907a67eed3e910308632d5157);
+            
+    
+            var poly_line_8e26413416918901f935af18458a5d15 = L.polyline(
+                [[40.7367, -73.9899], [40.7388, -74.0037]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            poly_line_8e26413416918901f935af18458a5d15.bindTooltip(
+                `<div>
+                     
+            Union Square ↔ Chelsea Market<br>
+            Distance: 1.542 km<br>
+            Avg Time: 5.14 min<br>
+            Peak Time: 10.28 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cb36355218bdb6a0b5dd84e7ca1fd407 = L.marker(
+                [40.73775, -73.99680000000001],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var div_icon_3eaf581c4c67ffb3f691ba0eaff75ada = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 10px; color: #1a1a1a; \n                                background-color: rgba(255, 255, 255, 0.8); \n                                padding: 2px 4px; border-radius: 3px;\n                                border: 1px solid #0066cc;\n                                font-weight: bold; white-space: nowrap;\"\u003e\n                        1.542 km / 5.14 min\n                    \u003c/div\u003e\n                ",
+  "className": "empty",
+});
+        
+    
+            marker_cb36355218bdb6a0b5dd84e7ca1fd407.bindTooltip(
+                `<div>
+                     
+            Union Square ↔ Chelsea Market<br>
+            Distance: 1.542 km<br>
+            Avg Time: 5.14 min<br>
+            Peak Time: 10.28 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cb36355218bdb6a0b5dd84e7ca1fd407.setIcon(div_icon_3eaf581c4c67ffb3f691ba0eaff75ada);
+            
+    
+            var poly_line_ee3a1485d3949f85edf169cee21b89af = L.polyline(
+                [[40.7367, -73.9899], [40.73082, -73.99733]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            poly_line_ee3a1485d3949f85edf169cee21b89af.bindTooltip(
+                `<div>
+                     
+            Union Square ↔ Washington Square Park<br>
+            Distance: 1.177 km<br>
+            Avg Time: 3.92 min<br>
+            Peak Time: 7.84 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b88936561e3d527315771ee40c8469c4 = L.marker(
+                [40.733760000000004, -73.993615],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var div_icon_c24d1e560845de307cfc636188f21581 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 10px; color: #1a1a1a; \n                                background-color: rgba(255, 255, 255, 0.8); \n                                padding: 2px 4px; border-radius: 3px;\n                                border: 1px solid #0066cc;\n                                font-weight: bold; white-space: nowrap;\"\u003e\n                        1.177 km / 3.92 min\n                    \u003c/div\u003e\n                ",
+  "className": "empty",
+});
+        
+    
+            marker_b88936561e3d527315771ee40c8469c4.bindTooltip(
+                `<div>
+                     
+            Union Square ↔ Washington Square Park<br>
+            Distance: 1.177 km<br>
+            Avg Time: 3.92 min<br>
+            Peak Time: 7.84 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b88936561e3d527315771ee40c8469c4.setIcon(div_icon_c24d1e560845de307cfc636188f21581);
+            
+    
+            var poly_line_d1b4ce03ffd4ac3fdd1bd4ba40b84502 = L.polyline(
+                [[40.7388, -74.0037], [40.73082, -73.99733]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            poly_line_d1b4ce03ffd4ac3fdd1bd4ba40b84502.bindTooltip(
+                `<div>
+                     
+            Chelsea Market ↔ Washington Square Park<br>
+            Distance: 1.348 km<br>
+            Avg Time: 4.49 min<br>
+            Peak Time: 8.98 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_082e76047ea8a70f4d50fe49acd9c73e = L.marker(
+                [40.734809999999996, -74.00051500000001],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var div_icon_f0a17ec389c55bfa7d3ab2f9ab48cdef = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 10px; color: #1a1a1a; \n                                background-color: rgba(255, 255, 255, 0.8); \n                                padding: 2px 4px; border-radius: 3px;\n                                border: 1px solid #0066cc;\n                                font-weight: bold; white-space: nowrap;\"\u003e\n                        1.348 km / 4.49 min\n                    \u003c/div\u003e\n                ",
+  "className": "empty",
+});
+        
+    
+            marker_082e76047ea8a70f4d50fe49acd9c73e.bindTooltip(
+                `<div>
+                     
+            Chelsea Market ↔ Washington Square Park<br>
+            Distance: 1.348 km<br>
+            Avg Time: 4.49 min<br>
+            Peak Time: 8.98 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_082e76047ea8a70f4d50fe49acd9c73e.setIcon(div_icon_f0a17ec389c55bfa7d3ab2f9ab48cdef);
+            
+    
+            var poly_line_8a8967559ae81bb7ee014823c56bd935 = L.polyline(
+                [[40.73082, -73.99733], [40.70314, -74.016]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            poly_line_8a8967559ae81bb7ee014823c56bd935.bindTooltip(
+                `<div>
+                     
+            Washington Square Park ↔ Battery Park / South Ferry<br>
+            Distance: 4.494 km<br>
+            Avg Time: 14.98 min<br>
+            Peak Time: 29.96 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_22aad78fb8715117387783d1c4d33361 = L.marker(
+                [40.71698, -74.006665],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var div_icon_6ee4ea13df39fd6e4785f512a059d174 = L.divIcon({
+  "html": "\n                    \u003cdiv style=\"font-size: 10px; color: #1a1a1a; \n                                background-color: rgba(255, 255, 255, 0.8); \n                                padding: 2px 4px; border-radius: 3px;\n                                border: 1px solid #0066cc;\n                                font-weight: bold; white-space: nowrap;\"\u003e\n                        4.494 km / 14.98 min\n                    \u003c/div\u003e\n                ",
+  "className": "empty",
+});
+        
+    
+            marker_22aad78fb8715117387783d1c4d33361.bindTooltip(
+                `<div>
+                     
+            Washington Square Park ↔ Battery Park / South Ferry<br>
+            Distance: 4.494 km<br>
+            Avg Time: 14.98 min<br>
+            Peak Time: 29.96 min
+            
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_22aad78fb8715117387783d1c4d33361.setIcon(div_icon_6ee4ea13df39fd6e4785f512a059d174);
+            
+    
+            var marker_e69818458b220ce17294417d7d23ea27 = L.marker(
+                [40.757, -73.98597],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var icon_55cb5f1b40c25a551cf6cc41cb8b4aa1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_193df0f732065ff8418aa2ad9870fb9c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ce4cf99a9fbfcfd90853ab765ad7e2ef = $(`<div id="html_ce4cf99a9fbfcfd90853ab765ad7e2ef" style="width: 100.0%; height: 100.0%;">     <b>Times Square</b><br>     Node ID: 0<br>     Connections: 2<br>     Lat: 40.75700<br>     Lon: -73.98597     </div>`)[0];
+                popup_193df0f732065ff8418aa2ad9870fb9c.setContent(html_ce4cf99a9fbfcfd90853ab765ad7e2ef);
+            
+        
+
+        marker_e69818458b220ce17294417d7d23ea27.bindPopup(popup_193df0f732065ff8418aa2ad9870fb9c)
+        ;
+
+        
+    
+    
+            marker_e69818458b220ce17294417d7d23ea27.bindTooltip(
+                `<div>
+                     Times Square
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e69818458b220ce17294417d7d23ea27.setIcon(icon_55cb5f1b40c25a551cf6cc41cb8b4aa1);
+            
+    
+            var circle_marker_1583437a7d26688382e26454b0f8240c = L.circleMarker(
+                [40.757, -73.98597],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var marker_2eb190985fe9f1ae0301927cee1cc013 = L.marker(
+                [40.75926, -73.97996],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var icon_816df57906e5d150b7f63e4c74d84604 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0aff0bdc13e8f9b9b1b4b8f8d1e29a00 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bee41f8731acfea90e5deae06ae82085 = $(`<div id="html_bee41f8731acfea90e5deae06ae82085" style="width: 100.0%; height: 100.0%;">     <b>Rockefeller Center</b><br>     Node ID: 1<br>     Connections: 3<br>     Lat: 40.75926<br>     Lon: -73.97996     </div>`)[0];
+                popup_0aff0bdc13e8f9b9b1b4b8f8d1e29a00.setContent(html_bee41f8731acfea90e5deae06ae82085);
+            
+        
+
+        marker_2eb190985fe9f1ae0301927cee1cc013.bindPopup(popup_0aff0bdc13e8f9b9b1b4b8f8d1e29a00)
+        ;
+
+        
+    
+    
+            marker_2eb190985fe9f1ae0301927cee1cc013.bindTooltip(
+                `<div>
+                     Rockefeller Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2eb190985fe9f1ae0301927cee1cc013.setIcon(icon_816df57906e5d150b7f63e4c74d84604);
+            
+    
+            var circle_marker_a5c99c47388bb509807f5a945a2628bb = L.circleMarker(
+                [40.75926, -73.97996],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var marker_6e3caebfc90cb105a282feadad934204 = L.marker(
+                [40.75361, -73.98417],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var icon_a451050827059253e4b0a055d6dde464 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ee80d66c4f05a8f226543fc03f65c41f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dcf08899087c56f1d67a28ec636e1f5d = $(`<div id="html_dcf08899087c56f1d67a28ec636e1f5d" style="width: 100.0%; height: 100.0%;">     <b>Bryant Park / NYPL</b><br>     Node ID: 2<br>     Connections: 4<br>     Lat: 40.75361<br>     Lon: -73.98417     </div>`)[0];
+                popup_ee80d66c4f05a8f226543fc03f65c41f.setContent(html_dcf08899087c56f1d67a28ec636e1f5d);
+            
+        
+
+        marker_6e3caebfc90cb105a282feadad934204.bindPopup(popup_ee80d66c4f05a8f226543fc03f65c41f)
+        ;
+
+        
+    
+    
+            marker_6e3caebfc90cb105a282feadad934204.bindTooltip(
+                `<div>
+                     Bryant Park / NYPL
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6e3caebfc90cb105a282feadad934204.setIcon(icon_a451050827059253e4b0a055d6dde464);
+            
+    
+            var circle_marker_382c6a51e875f37d63920e223293feaf = L.circleMarker(
+                [40.75361, -73.98417],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var marker_2ea54dcd118fe31788c3a1edc7903803 = L.marker(
+                [40.75273, -73.97723],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var icon_6106388ada2361f1a0b2141d8fa93c12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e417e8aa1d453ab904e9cdc239dd6760 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d0e44c2ff281bb38bd82c9a108930ef3 = $(`<div id="html_d0e44c2ff281bb38bd82c9a108930ef3" style="width: 100.0%; height: 100.0%;">     <b>Grand Central Terminal</b><br>     Node ID: 3<br>     Connections: 3<br>     Lat: 40.75273<br>     Lon: -73.97723     </div>`)[0];
+                popup_e417e8aa1d453ab904e9cdc239dd6760.setContent(html_d0e44c2ff281bb38bd82c9a108930ef3);
+            
+        
+
+        marker_2ea54dcd118fe31788c3a1edc7903803.bindPopup(popup_e417e8aa1d453ab904e9cdc239dd6760)
+        ;
+
+        
+    
+    
+            marker_2ea54dcd118fe31788c3a1edc7903803.bindTooltip(
+                `<div>
+                     Grand Central Terminal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2ea54dcd118fe31788c3a1edc7903803.setIcon(icon_6106388ada2361f1a0b2141d8fa93c12);
+            
+    
+            var circle_marker_aac927be2205be64d66c354fa28d829b = L.circleMarker(
+                [40.75273, -73.97723],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var marker_dd64fc4c51b8e808eb4a7082e9da7bad = L.marker(
+                [40.74844, -73.98566],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var icon_f0825140e48ce84b7a1cc6db72ca0657 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_67ff5249fc5d4a81c43b595d2c9d4586 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7f8c0d8ff58ec432a5abd6a4ea88d6a6 = $(`<div id="html_7f8c0d8ff58ec432a5abd6a4ea88d6a6" style="width: 100.0%; height: 100.0%;">     <b>Empire State Building</b><br>     Node ID: 4<br>     Connections: 3<br>     Lat: 40.74844<br>     Lon: -73.98566     </div>`)[0];
+                popup_67ff5249fc5d4a81c43b595d2c9d4586.setContent(html_7f8c0d8ff58ec432a5abd6a4ea88d6a6);
+            
+        
+
+        marker_dd64fc4c51b8e808eb4a7082e9da7bad.bindPopup(popup_67ff5249fc5d4a81c43b595d2c9d4586)
+        ;
+
+        
+    
+    
+            marker_dd64fc4c51b8e808eb4a7082e9da7bad.bindTooltip(
+                `<div>
+                     Empire State Building
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dd64fc4c51b8e808eb4a7082e9da7bad.setIcon(icon_f0825140e48ce84b7a1cc6db72ca0657);
+            
+    
+            var circle_marker_968af2cab2f926fb2707fa4431ae3794 = L.circleMarker(
+                [40.74844, -73.98566],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var marker_5726faf52b093d8e5e018f0565007f97 = L.marker(
+                [40.74103, -73.98969],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var icon_4057a5811a61e1039e68a735e5f7eae1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d9bbdf3fa9ad2abf572ca7f449a521e6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5f69479e023f112cd66a8dc00657353a = $(`<div id="html_5f69479e023f112cd66a8dc00657353a" style="width: 100.0%; height: 100.0%;">     <b>Flatiron / Madison Sq Park</b><br>     Node ID: 5<br>     Connections: 2<br>     Lat: 40.74103<br>     Lon: -73.98969     </div>`)[0];
+                popup_d9bbdf3fa9ad2abf572ca7f449a521e6.setContent(html_5f69479e023f112cd66a8dc00657353a);
+            
+        
+
+        marker_5726faf52b093d8e5e018f0565007f97.bindPopup(popup_d9bbdf3fa9ad2abf572ca7f449a521e6)
+        ;
+
+        
+    
+    
+            marker_5726faf52b093d8e5e018f0565007f97.bindTooltip(
+                `<div>
+                     Flatiron / Madison Sq Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5726faf52b093d8e5e018f0565007f97.setIcon(icon_4057a5811a61e1039e68a735e5f7eae1);
+            
+    
+            var circle_marker_218ecb589b4ef63a64b2379d8a42d966 = L.circleMarker(
+                [40.74103, -73.98969],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var marker_84dbe536276b02667586aca3108a9980 = L.marker(
+                [40.7367, -73.9899],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var icon_a46b71f6843603f6940cd5ffc321946e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4b6ee5e10057e70f56ae2a73dc590888 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_999a1a3603914ed374729347667681d1 = $(`<div id="html_999a1a3603914ed374729347667681d1" style="width: 100.0%; height: 100.0%;">     <b>Union Square</b><br>     Node ID: 6<br>     Connections: 3<br>     Lat: 40.73670<br>     Lon: -73.98990     </div>`)[0];
+                popup_4b6ee5e10057e70f56ae2a73dc590888.setContent(html_999a1a3603914ed374729347667681d1);
+            
+        
+
+        marker_84dbe536276b02667586aca3108a9980.bindPopup(popup_4b6ee5e10057e70f56ae2a73dc590888)
+        ;
+
+        
+    
+    
+            marker_84dbe536276b02667586aca3108a9980.bindTooltip(
+                `<div>
+                     Union Square
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_84dbe536276b02667586aca3108a9980.setIcon(icon_a46b71f6843603f6940cd5ffc321946e);
+            
+    
+            var circle_marker_ae2d4da00f350444afde06cca58c49bf = L.circleMarker(
+                [40.7367, -73.9899],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var marker_68e49e33210700aa66031300d76e78a6 = L.marker(
+                [40.7388, -74.0037],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var icon_f030e0e2f0fef82fb66d330a68853492 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_325e9843c783d432825b99dad3ff59ca = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bf9f8eda598e29374c372ed11efbfb7d = $(`<div id="html_bf9f8eda598e29374c372ed11efbfb7d" style="width: 100.0%; height: 100.0%;">     <b>Chelsea Market</b><br>     Node ID: 7<br>     Connections: 2<br>     Lat: 40.73880<br>     Lon: -74.00370     </div>`)[0];
+                popup_325e9843c783d432825b99dad3ff59ca.setContent(html_bf9f8eda598e29374c372ed11efbfb7d);
+            
+        
+
+        marker_68e49e33210700aa66031300d76e78a6.bindPopup(popup_325e9843c783d432825b99dad3ff59ca)
+        ;
+
+        
+    
+    
+            marker_68e49e33210700aa66031300d76e78a6.bindTooltip(
+                `<div>
+                     Chelsea Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_68e49e33210700aa66031300d76e78a6.setIcon(icon_f030e0e2f0fef82fb66d330a68853492);
+            
+    
+            var circle_marker_5167a57631363030af5c99f31e3542c0 = L.circleMarker(
+                [40.7388, -74.0037],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var marker_c1bdb65934d25b73369758b751bb88bf = L.marker(
+                [40.73082, -73.99733],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var icon_45593c741cb604ac82c01a365dd53385 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e692a71dc9c07c5ac92a257c0f93ed7b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bf20125afac48e8d5b6b14de65cad3c2 = $(`<div id="html_bf20125afac48e8d5b6b14de65cad3c2" style="width: 100.0%; height: 100.0%;">     <b>Washington Square Park</b><br>     Node ID: 8<br>     Connections: 3<br>     Lat: 40.73082<br>     Lon: -73.99733     </div>`)[0];
+                popup_e692a71dc9c07c5ac92a257c0f93ed7b.setContent(html_bf20125afac48e8d5b6b14de65cad3c2);
+            
+        
+
+        marker_c1bdb65934d25b73369758b751bb88bf.bindPopup(popup_e692a71dc9c07c5ac92a257c0f93ed7b)
+        ;
+
+        
+    
+    
+            marker_c1bdb65934d25b73369758b751bb88bf.bindTooltip(
+                `<div>
+                     Washington Square Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c1bdb65934d25b73369758b751bb88bf.setIcon(icon_45593c741cb604ac82c01a365dd53385);
+            
+    
+            var circle_marker_442c15ea92a842266d0c0fe6528f3a27 = L.circleMarker(
+                [40.73082, -73.99733],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var marker_cdae0f55eb71407c1e390b9aa3bdb32c = L.marker(
+                [40.70314, -74.016],
+                {
+}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+    
+            var icon_ffa5d93fd64ed42a352c3b70059915aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f8bb32610619cfa469f7e87507021b2f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_278fa3395c13dfafe2bd729d26d097f5 = $(`<div id="html_278fa3395c13dfafe2bd729d26d097f5" style="width: 100.0%; height: 100.0%;">     <b>Battery Park / South Ferry</b><br>     Node ID: 9<br>     Connections: 1<br>     Lat: 40.70314<br>     Lon: -74.01600     </div>`)[0];
+                popup_f8bb32610619cfa469f7e87507021b2f.setContent(html_278fa3395c13dfafe2bd729d26d097f5);
+            
+        
+
+        marker_cdae0f55eb71407c1e390b9aa3bdb32c.bindPopup(popup_f8bb32610619cfa469f7e87507021b2f)
+        ;
+
+        
+    
+    
+            marker_cdae0f55eb71407c1e390b9aa3bdb32c.bindTooltip(
+                `<div>
+                     Battery Park / South Ferry
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cdae0f55eb71407c1e390b9aa3bdb32c.setIcon(icon_ffa5d93fd64ed42a352c3b70059915aa);
+            
+    
+            var circle_marker_735e373111c80c8815a794df94f95618 = L.circleMarker(
+                [40.70314, -74.016],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_747c0bfb6df54b1663610687117ec804);
+        
+</script>
+</html>
