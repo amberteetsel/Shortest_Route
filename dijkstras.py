@@ -3,7 +3,7 @@ import json
 import numpy as np
 import random
 
-with open('manhattan_driving_distances.json', 'r') as f:
+with open('src/data/manhattan_driving_distances.json', 'r') as f:
     loaded_dict = json.load(f)
 
 # average traffic time
@@ -26,15 +26,15 @@ distances = g.dijkstra("Empire State Building")
 for i, d in enumerate(distances):
     print(f"Distance from Empire State Building to {g.vertex_data[i]} during average traffic hours : {d}")
 
-for i in g.adj_matrix:
-    for j in i:
-        print(j, '\t', end= '')
-    print()
-print()
-for i in g.adj_matrix:
-    for j in i:
-        print(j, '\t', end= '')
-    print()
+# for i in g.adj_matrix:
+#     for j in i:
+#         print(j, '\t', end= '')
+#     print()
+# print()
+# for i in g.adj_matrix:
+#     for j in i:
+#         print(j, '\t', end= '')
+#     print()
 
 # Simulated peak traffic times
 g_sim_peak_traffic = Graph(len(loaded_dict['nodes']))

@@ -2,7 +2,7 @@ import json
 import folium
 from folium import plugins
 
-with open('manhattan_driving_distances.json', 'r') as f:
+with open('src/data/manhattan_driving_distances.json', 'r') as f:
     graph_data = json.load(f)
 
 m = folium.Map(
