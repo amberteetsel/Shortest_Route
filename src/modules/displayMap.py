@@ -2,15 +2,17 @@ from modules.graph import Graph
 from modules.mapGraph import build_graph_from_json
 import folium
 from IPython.display import display
+import random
+import numpy as np
 
 # Build graph & mappings
-def build_graph_mappings(data, start, end, scenario):
+def build_graph_mappings(data, start, end, scenario, uncertainty):
 
-    g, id_map, index_to_node_id = build_graph_from_json(data, scenario)
+    g, id_map, index_to_node_id = build_graph_from_json(data, scenario, uncertainty)
 
     path_indices = g.get_path(start, end)
 
-    print("Shortest path indices:", path_indices)
+    # print("Shortest path indices:", path_indices)
     print("Shortest path names:", [g.vertex_data[i] for i in path_indices])
 
     # Folium visualization
