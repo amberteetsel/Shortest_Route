@@ -2,20 +2,6 @@
 ## Data Structures &amp; Algorithms Group Project 3
 
 
-### Approach
+### Report
 
-##### I. City Selection
-
-##### II. Defining Nodes
-
-##### III. Building the Map
-
-##### VI: Base + Rush Hour Scenarios
-
-###  Graph Structure &amp; Algorithm Implementation
-
-##### I: Graph Representation
-
-##### II: Dijkstra's Algorithm
-
-##### III: Design Choices
+Please see `src` $\rightarrow$ `notebooks` $\rightarrow$  `test_cases.ipynb` for full report
